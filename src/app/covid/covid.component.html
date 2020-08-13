@@ -1,0 +1,56 @@
+<div class="grafico-covid">
+  
+  <section>
+    <article>
+
+      <p class="grafico-covid__descricao">
+        Seja bem-vindo ao Portal Brasil Covid-19, uma plataforma onde você pode visualizar os dados 
+        reais dessa pandemia no Brasil e ainda ver comparativos com outras doenças!
+      </p>
+      
+      <div class="grafico-covid__grid-numeros">
+        <div class="grafico-covid__numeros-hoje">
+          <p class="grafico-covid__numeros-descricao">
+            Casos confirmados
+          </p>
+          <p class="grafico-covid__numeros-descricao grafico-covid__azul">{{ casosConfirmados }}</p>
+        </div>
+
+        <div class="grafico-covid__numeros-hoje">
+          <p class="grafico-covid__numeros-descricao">
+            Casos recuperados
+          </p>
+          <p class="grafico-covid__numeros-descricao grafico-covid__verde">{{ casosRecuperados }}</p>
+        </div>
+
+        <div class="grafico-covid__numeros-hoje">
+          <p class="grafico-covid__numeros-descricao">
+            Casos ativos
+          </p>
+          <p class="grafico-covid__numeros-descricao grafico-covid__amarelo">{{ casosAtivos }}</p>
+        </div>
+
+        <div class="grafico-covid__numeros-hoje">
+          <p class="grafico-covid__numeros-descricao">
+            Óbitos
+          </p>
+          <p class="grafico-covid__numeros-descricao grafico-covid__vermelho">{{ casosObitos }}</p>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
+  <section class="grafico-covid__grid">
+    
+    <p class="grafico-covid__descricao">
+      Abaixo podemos ver em tempo real os números dessa pandemia por estado.
+    </p>
+
+    <div class="grafico-covid__card">
+      <h2 class="grafico-covid__card-titulo">Casos x Óbitos por Covid-19 até hoje</h2>
+      <app-obitos></app-obitos>
+    </div>
+  </section>
+
+</div>
