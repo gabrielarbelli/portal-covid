@@ -3,16 +3,17 @@ import { Router } from '@angular/router';
 import { data_covid_brasil } from '../../assets/db.json';
 
 @Component({
-  selector: 'app-covid',
-  templateUrl: './covid.component.html',
-  styleUrls: ['./covid.component.scss']
+  selector: 'app-comparativos',
+  templateUrl: './comparativos.component.html',
+  styleUrls: ['./comparativos.component.scss']
 })
-export class CovidComponent implements OnInit {
+export class ComparativosComponent implements OnInit {
 
-  @Input() casosConfirmados = 0;
-  @Input() casosRecuperados = 0;
-  @Input() casosAtivos = 0;
-  @Input() casosObitos = 0;
+  @Input() mortesCovid = 0;
+  casosConfirmados = 0;
+  casosRecuperados = 0;
+  casosAtivos = 0;
+  casosObitos = 0;
 
   constructor(private router: Router) { }
 
@@ -27,6 +28,8 @@ export class CovidComponent implements OnInit {
 
     // JSON API local para publicação
     const json = data_covid_brasil;
+
+    this.mortesCovid = json[0].deaths;
 
     this.casosConfirmados = json[0].confirmed;
     this.casosRecuperados = json[0].recovered;

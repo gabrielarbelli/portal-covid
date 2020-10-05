@@ -1,31 +1,53 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CovidComponent } from './covid/covid.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {  ChartsModule } from 'ng2-charts';
 import { Chart } from 'chart.js';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { CovidComponent } from './covid/covid.component';
 import { ObitosComponent } from './covid/obitos/obitos.component';
-import { RecuperadosComponent } from './covid/recuperados/recuperados.component';
+import { ProporcaoComponent } from './covid/proporcao/proporcao.component';
+import { HistoricoComponent } from './covid/historico/historico.component';
+import { ComparativosComponent } from './comparativos/comparativos.component';
+import { DoencasGravesComponent } from './comparativos/doencas-graves/doencas-graves.component';
+import { DoencasParasitariasComponent } from './comparativos/doencas-parasitarias/doencas-parasitarias.component';
+import { PandemiasComponent } from './pandemias/pandemias.component';
+import { ExternasComponent } from './externas/externas.component';
+import { CausasExternasComponent } from './externas/causas-externas/causas-externas.component';
+
+import { ThousandPlacesPipe } from './shared/pipe/thousand-places.pipe';
+import { LegendaComponent } from './shared/componentes/legenda/legenda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CovidComponent,
     HeaderComponent,
     FooterComponent,
     MenuComponent,
+    CovidComponent,
     ObitosComponent,
-    RecuperadosComponent
+    ProporcaoComponent,
+    HistoricoComponent,
+    ComparativosComponent,
+    DoencasGravesComponent,
+    DoencasParasitariasComponent,
+    PandemiasComponent,
+    ExternasComponent,
+    CausasExternasComponent,
+    ThousandPlacesPipe,
+    LegendaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ChartsModule
   ],
   providers: [],
